@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ClienteService } from '../../services/cleinte-services';
+import { ClienteService } from '../../services/cliente-services';
 
 @Component({
   selector: 'app-cliente',
@@ -8,6 +8,15 @@ import { ClienteService } from '../../services/cleinte-services';
   styleUrl: './cliente.css',
 })
 export class Cliente {
-  service:
+  
+  constructor(private service:ClienteService,
+  ){}
+
+
+  getClientes(){
+    this.service.getClientes();
+
+
+  }
 
 }
