@@ -1,7 +1,12 @@
+import { Injectable } from "@angular/core";
+
+@Injectable({
+    providedIn: 'root'
+})
 export class Calculadora {
 
-    somar(primeiroNumero : number, segundoNumero : number): number {
-        return primeiroNumero + segundoNumero;
+    somar(num1 : number, num2 : number): number {
+        return  Number(num1) + Number(num2);
     }
 
     sub(num1 : number, num2 : number): number {

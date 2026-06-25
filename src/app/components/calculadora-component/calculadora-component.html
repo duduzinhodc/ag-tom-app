@@ -1,0 +1,20 @@
+<h1>Calculadora</h1><br>
+<form  [formGroup]="form">
+    <input type="text" id="num1" name="num1" formControlName="num1"/> <br/>
+    <input type="text" id="num2" name="num2" formControlName="num2"/> <br />
+    <input type="text" id="result" name="result" readonly="true" formControlName="result"/> <br />
+    <button class="btn btn-primary pl-3" (click)="cliqueBotaoOperacao('SOMAR')">+</button>
+    <button class="btn btn-primary pl-3" (click)="cliqueBotaoOperacao('SUB')">-</button>
+    <button class="btn btn-primary pl-3" (click)="cliqueBotaoOperacao('MULTI')">x</button>
+    <button class="btn btn-primary pl-3" (click)="cliqueBotaoOperacao('DIV')">/</button>
+    <button class="btn btn-primary pl-3" (click)="calcular()">=</button>
+
+    <div #modal class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+        Escolha uma operação!
+        </div>
+    </div>
+    </div>
+</form>
+
